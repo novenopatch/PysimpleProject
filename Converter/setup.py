@@ -13,7 +13,7 @@ while True :
     if event == sg.WINDOW_CLOSED:
         break
     if event == "-BUTTON1-":
-        window["-TEXT-"].update(values["-Input-"])
+        window["-TEXT-"].update(visible=False)
         print(values)
     if event == "-TEXT-":
             print('text was pressed')
