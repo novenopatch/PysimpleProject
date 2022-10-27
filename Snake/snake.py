@@ -59,10 +59,12 @@ while True:
 
         new_head = (snake_body[0][0] + direction[0], snake_body[0][1] + direction[1])
         snake_body.insert(0, new_head)
+        #growing snake
         if not fruit_eaten:
             snake_body.pop()
         fruit_eaten = False
 
+        #check collision
         if not 0 <= snake_body[0][0] <= CELL_NUM - 1 or \
                 not 0 <= snake_body[0][1] <= CELL_NUM - 1 or snake_body[0] in snake_body[1:]:
             break
