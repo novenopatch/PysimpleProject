@@ -26,7 +26,7 @@ active = False
 laps_count = 0
 space_time = 0
 while True:
-    event, kew = window.read(timeout=10)
+    event, key = window.read(timeout=10)
     if event in (sg.WIN_CLOSED, "-CLOSE-"):
         break
     if event == "-START-":
